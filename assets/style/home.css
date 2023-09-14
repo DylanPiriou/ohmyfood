@@ -6,9 +6,8 @@
 }
 
 body {
-  font-family: "Roboto";
-  color: black;
-  background: white;
+  font-family: "Roboto", serif;
+  color: #101010;
 }
 
 header {
@@ -28,7 +27,7 @@ header nav {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 header nav .logo {
-  width: 162px;
+  width: 160px;
 }
 header .location {
   display: flex;
@@ -178,6 +177,7 @@ main .restaurants .card__container .card .content .heart {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 main .restaurants .card__container .card .content .heart:hover {
   background-image: url("../imgs/icons/Like-full.svg");
@@ -222,4 +222,4 @@ footer .footer__wrapper a {
   gap: 15px;
   text-decoration: none;
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=home.css.map */
