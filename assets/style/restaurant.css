@@ -152,7 +152,7 @@ footer .footer__wrapper {
   justify-content: center;
   gap: 15px;
 }
-footer .footer__wrapper img {
+footer .footer__wrapper .logo-footer {
   margin-bottom: 10px;
 }
 footer .footer__wrapper a {
@@ -162,4 +162,14 @@ footer .footer__wrapper a {
   gap: 15px;
   text-decoration: none;
   color: white;
+}
+@media screen and (min-width: 860px) {
+  footer .footer__wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer__wrapper .logo-footer {
+    margin: 0 10px 0 0;
+  }
 }/*# sourceMappingURL=restaurant.css.map */
