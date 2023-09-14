@@ -142,7 +142,7 @@ main {
       }
     }
 
-    @media screen and (min-width: 790px) {
+    @media screen and (min-width: 860px) {
       ul {
         flex-direction: row;
       }
@@ -229,7 +229,7 @@ main {
         }
       }
     }
-    @media screen and (min-width: 790px) {
+    @media screen and (min-width: 860px) {
       .card__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
