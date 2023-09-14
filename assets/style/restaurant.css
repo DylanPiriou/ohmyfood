@@ -114,16 +114,71 @@ main .menu__wrapper .menu ul li {
   width: 100%;
   list-style-type: none;
   border-radius: 15px;
-  padding: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: white;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transform: translateX(-10%);
+  opacity: 0;
+  animation: slideIn 0.3s linear forwards;
+  animation-delay: calc(0.3s * index);
+}
+main .menu__wrapper .menu ul li .card__content {
+  flex-grow: 1;
+  padding: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   position: relative;
 }
-main .menu__wrapper .menu ul li .price {
+main .menu__wrapper .menu ul li .card__content .price {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
+}
+main .menu__wrapper .menu ul li .added-img {
+  transition: all 0.3 ease;
+  height: 100%;
+  width: 0;
+}
+main .menu__wrapper .menu ul li:hover .added-img {
+  width: 10%;
+}
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+main .menu__wrapper .menu ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+main .menu__wrapper .menu ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+main .menu__wrapper .menu ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+main .menu__wrapper .menu ul li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+main .menu__wrapper .menu ul li:nth-child(5) {
+  animation-delay: 1s;
+}
+main .menu__wrapper .menu ul li:nth-child(6) {
+  animation-delay: 1.2s;
+}
+main .menu__wrapper .menu ul li:nth-child(7) {
+  animation-delay: 1.4s;
+}
+main .menu__wrapper .menu ul li:nth-child(8) {
+  animation-delay: 1.6s;
+}
+main .menu__wrapper .menu ul li:nth-child(9) {
+  animation-delay: 1.8s;
 }
 main .menu__wrapper button {
   padding: 15px 55px;
