@@ -79,6 +79,7 @@ main .menu__wrapper .title__wrapper .heart {
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 main .menu__wrapper .title__wrapper .heart:hover {
   background-image: url("../imgs/icons/Like-full.svg");
@@ -112,12 +113,13 @@ main .menu__wrapper .menu ul {
 }
 main .menu__wrapper .menu ul li {
   width: 100%;
+  height: 8vh;
   list-style-type: none;
   border-radius: 15px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   background: white;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -127,7 +129,7 @@ main .menu__wrapper .menu ul li {
   animation-delay: calc(0.3s * index);
 }
 main .menu__wrapper .menu ul li .card__content {
-  flex-grow: 1;
+  flex: 1;
   padding: 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -140,9 +142,14 @@ main .menu__wrapper .menu ul li .card__content .price {
   transform: translateY(-50%);
 }
 main .menu__wrapper .menu ul li .added-img {
-  transition: all 0.3 ease;
+  background-image: url(../imgs/icons/Select-button.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   width: 0;
+  aspect-ratio: 1;
+  transition: all 0.3s ease;
 }
 main .menu__wrapper .menu ul li:hover .added-img {
   width: 10%;
@@ -154,31 +161,31 @@ main .menu__wrapper .menu ul li:hover .added-img {
   }
 }
 main .menu__wrapper .menu ul li:nth-child(1) {
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 main .menu__wrapper .menu ul li:nth-child(2) {
-  animation-delay: 0.4s;
-}
-main .menu__wrapper .menu ul li:nth-child(3) {
   animation-delay: 0.6s;
 }
+main .menu__wrapper .menu ul li:nth-child(3) {
+  animation-delay: 0.9s;
+}
 main .menu__wrapper .menu ul li:nth-child(4) {
-  animation-delay: 0.8s;
-}
-main .menu__wrapper .menu ul li:nth-child(5) {
-  animation-delay: 1s;
-}
-main .menu__wrapper .menu ul li:nth-child(6) {
   animation-delay: 1.2s;
 }
+main .menu__wrapper .menu ul li:nth-child(5) {
+  animation-delay: 1.5s;
+}
+main .menu__wrapper .menu ul li:nth-child(6) {
+  animation-delay: 1.8s;
+}
 main .menu__wrapper .menu ul li:nth-child(7) {
-  animation-delay: 1.4s;
+  animation-delay: 2.1s;
 }
 main .menu__wrapper .menu ul li:nth-child(8) {
-  animation-delay: 1.6s;
+  animation-delay: 2.4s;
 }
 main .menu__wrapper .menu ul li:nth-child(9) {
-  animation-delay: 1.8s;
+  animation-delay: 2.7s;
 }
 main .menu__wrapper button {
   padding: 15px 55px;
@@ -210,21 +217,34 @@ footer .footer__wrapper {
 footer .footer__wrapper .logo-footer {
   margin-bottom: 10px;
 }
-footer .footer__wrapper a {
+footer .footer__wrapper .links__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+footer .footer__wrapper .links__container .link {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+footer .footer__wrapper .links__container .link a {
   text-decoration: none;
   color: white;
 }
 @media screen and (min-width: 860px) {
   footer .footer__wrapper {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
     align-items: center;
+    gap: 25px;
+  }
+  footer .footer__wrapper .links__container {
+    flex-direction: row;
   }
   footer .footer__wrapper .logo-footer {
-    margin: 0 10px 0 0;
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=restaurant.css.map */

@@ -10,16 +10,16 @@ body {
   color: #101010;
 }
 
-aside {
+.loader {
   position: fixed;
-  height: 120vh;
+  height: 120%;
   top: -50px;
-  left: 0;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  overflow: hidden;
   background: #101010;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%, 0% 90%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%, 0% 90%);
@@ -31,11 +31,11 @@ aside {
     transform: translateY(-100%);
   }
 }
-aside .wineglass {
+.loader .wineglass {
   height: 36px;
   position: relative;
 }
-aside .wineglass:after {
+.loader .wineglass:after {
   content: "";
   position: absolute;
   top: 47px;
@@ -45,13 +45,13 @@ aside .wineglass:after {
   background: white;
   box-shadow: 0 0 1px white;
 }
-aside .top {
+.loader .top {
   background: white;
   width: 30px;
   height: 36px;
   border-radius: 0 0 36px 36px;
 }
-aside .top:before {
+.loader .top:before {
   content: "";
   position: absolute;
   left: 4px;
@@ -61,13 +61,13 @@ aside .top:before {
   border-radius: 50%;
   background: linear-gradient(transparent 50%, #9356dc 50%);
 }
-aside .left .top:before {
+.loader .left .top:before {
   animation: rotate2 2s linear infinite;
 }
-aside .right .top:before {
+.loader .right .top:before {
   animation: rotate1 2s linear infinite;
 }
-aside .top:after {
+.loader .top:after {
   content: "";
   position: absolute;
   top: 35px;
@@ -77,12 +77,12 @@ aside .top:after {
   background: white;
   box-shadow: 0 0 1px white;
 }
-aside .left {
+.loader .left {
   display: inline-block;
   margin-right: 10px;
   animation: rotate1 2s cubic-bezier(0.39, 1.52, 0.46, 0.92) infinite;
 }
-aside .right {
+.loader .right {
   display: inline-block;
   animation: rotate2 2s cubic-bezier(0.39, 1.52, 0.46, 0.92) infinite;
 }
@@ -118,6 +118,7 @@ header nav {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 header nav .logo {
   width: 160px;
@@ -158,6 +159,7 @@ main .title__container button {
   outline: none;
   cursor: pointer;
   color: white;
+  transition: all 5s ease;
 }
 main .title__container button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
@@ -243,6 +245,7 @@ main .restaurants .card__container .card img {
   height: 70%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.3s ease;
 }
 main .restaurants .card__container .card .content {
   width: 100%;
@@ -263,7 +266,7 @@ main .restaurants .card__container .card .content p {
 main .restaurants .card__container .card .content .heart {
   position: absolute;
   top: 25%;
-  right: 40px;
+  right: 20px;
   height: 25px;
   width: 25px;
   background-image: url("../imgs/icons/Like.svg");
@@ -271,6 +274,7 @@ main .restaurants .card__container .card .content .heart {
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 main .restaurants .card__container .card .content .heart:hover {
   background-image: url("../imgs/icons/Like-full.svg");
@@ -284,6 +288,9 @@ main .restaurants .card__container .card .new {
   background: #99e2d0;
   color: #008766;
   z-index: 10;
+}
+main .restaurants .card__container .card:hover img {
+  transform: scale(1.02);
 }
 @media screen and (min-width: 860px) {
   main .restaurants .card__container {
@@ -308,21 +315,34 @@ footer .footer__wrapper {
 footer .footer__wrapper .logo-footer {
   margin-bottom: 10px;
 }
-footer .footer__wrapper a {
+footer .footer__wrapper .links__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+footer .footer__wrapper .links__container .link {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+footer .footer__wrapper .links__container .link a {
   text-decoration: none;
   color: white;
 }
 @media screen and (min-width: 860px) {
   footer .footer__wrapper {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
     align-items: center;
+    gap: 25px;
+  }
+  footer .footer__wrapper .links__container {
+    flex-direction: row;
   }
   footer .footer__wrapper .logo-footer {
-    margin: 0 10px 0 0;
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=home.css.map */
