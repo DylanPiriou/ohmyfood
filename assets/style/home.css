@@ -191,6 +191,7 @@ main .operation ul li {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   white-space: nowrap;
+  font-size: clamp(14px, 2vw, 18px);
   position: relative;
 }
 main .operation ul .bubble {
@@ -262,6 +263,7 @@ main .restaurants .card__container .card .content p {
   margin: 0;
   padding: 0;
   color: #101010;
+  font-size: clamp(14px, 2vw, 18px);
 }
 main .restaurants .card__container .card .content .heart {
   position: absolute;
