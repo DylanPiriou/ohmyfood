@@ -152,10 +152,11 @@ main {
           animation-delay: calc(0.3s * index);
 
           .card__content {
-            flex: 1;
+            width: 100%;
             padding: 15px;
             position: relative;
-            font-size: clamp(14px, 2vw, 18px);
+            font-size: clamp(12px, 2vw, 18px);
+            transition: width .3s ease;
 
             h3, p{
                 max-width: 80%;
@@ -184,7 +185,17 @@ main {
           }
 
           &:hover .added-img {
-            width: 10%;
+            width: 35px;
+          }
+
+          &:hover .card__content{
+            width: 80%;
+          }
+
+          @media screen and (min-width: 1020px){
+            &:hover .card__content{
+              width: 100%;
+            }
           }
 
           @keyframes slideIn {
@@ -221,7 +232,8 @@ main {
             rgba(255, 255, 255, 0.15) 0%,
             rgba(255, 255, 255, 0.15) 100%
           ),
-          linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+          linear-gradient(201deg, $primary -5.2%, $secondary 110.74%);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
       }
     }
   }
