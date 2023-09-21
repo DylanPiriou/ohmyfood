@@ -149,20 +149,20 @@ main {
           transform: translateX(-10%);
           opacity: 0;
           animation: slideIn 0.3s linear forwards;
-          animation-delay: calc(0.3s * index);
 
           .card__content {
             width: 100%;
             padding: 15px;
             position: relative;
             font-size: clamp(12px, 2vw, 18px);
-            transition: width .3s ease;
+            transition: width 0.3s ease;
 
-            h3, p{
-                max-width: 80%;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+            h3,
+            p {
+              max-width: 80%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
 
             .price {
@@ -180,7 +180,6 @@ main {
             background-repeat: no-repeat;
             height: 100%;
             width: 0;
-            aspect-ratio: 1;
             transition: all 0.3s ease;
           }
 
@@ -188,12 +187,12 @@ main {
             width: 35px;
           }
 
-          &:hover .card__content{
+          &:hover .card__content {
             width: 80%;
           }
 
-          @media screen and (min-width: 1020px){
-            &:hover .card__content{
+          @media screen and (min-width: 1020px) {
+            &:hover .card__content {
               width: 100%;
             }
           }
@@ -206,15 +205,14 @@ main {
           }
 
           $delay: 0.3s;
-          @for $i from 1 through 9 {
+          @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
               animation-delay: $delay * $i;
             }
           }
         }
-
+      }
     }
-}
 
     button {
       padding: 15px 55px;
@@ -257,11 +255,11 @@ footer {
     }
 
     .links__container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 10px;
 
       .link {
         display: flex;
@@ -284,10 +282,10 @@ footer {
       align-items: center;
       gap: 25px;
 
-      .links__container{
+      .links__container {
         flex-direction: row;
       }
-      .logo-footer{
+      .logo-footer {
         margin-bottom: 0;
       }
     }

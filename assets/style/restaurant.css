@@ -128,7 +128,6 @@ main .menu__wrapper .menu ul li {
   transform: translateX(-10%);
   opacity: 0;
   animation: slideIn 0.3s linear forwards;
-  animation-delay: calc(0.3s * index);
 }
 main .menu__wrapper .menu ul li .card__content {
   width: 100%;
@@ -137,7 +136,8 @@ main .menu__wrapper .menu ul li .card__content {
   font-size: clamp(12px, 2vw, 18px);
   transition: width 0.3s ease;
 }
-main .menu__wrapper .menu ul li .card__content h3, main .menu__wrapper .menu ul li .card__content p {
+main .menu__wrapper .menu ul li .card__content h3,
+main .menu__wrapper .menu ul li .card__content p {
   max-width: 80%;
   white-space: nowrap;
   overflow: hidden;
@@ -156,7 +156,6 @@ main .menu__wrapper .menu ul li .added-img {
   background-repeat: no-repeat;
   height: 100%;
   width: 0;
-  aspect-ratio: 1;
   transition: all 0.3s ease;
 }
 main .menu__wrapper .menu ul li:hover .added-img {
@@ -187,21 +186,6 @@ main .menu__wrapper .menu ul li:nth-child(3) {
 }
 main .menu__wrapper .menu ul li:nth-child(4) {
   animation-delay: 1.2s;
-}
-main .menu__wrapper .menu ul li:nth-child(5) {
-  animation-delay: 1.5s;
-}
-main .menu__wrapper .menu ul li:nth-child(6) {
-  animation-delay: 1.8s;
-}
-main .menu__wrapper .menu ul li:nth-child(7) {
-  animation-delay: 2.1s;
-}
-main .menu__wrapper .menu ul li:nth-child(8) {
-  animation-delay: 2.4s;
-}
-main .menu__wrapper .menu ul li:nth-child(9) {
-  animation-delay: 2.7s;
 }
 main .menu__wrapper button {
   padding: 15px 55px;
